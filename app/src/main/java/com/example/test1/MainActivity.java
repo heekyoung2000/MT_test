@@ -1,5 +1,6 @@
 package com.example.test1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -37,20 +38,27 @@ public class MainActivity extends AppCompatActivity {
             switch(menuItem.getItemId())
             {
                 case R.id.homeItem:
-                    transaction.replace(R.id.frameLayout, fragmentHome).commitAllowingStateLoss();
-
+                    Intent intent1 = new Intent(MainActivity.this, homeActivity.class);
+                    startActivity(intent1);
+                    //transaction.replace(R.id.frameLayout, fragmentHome).commitAllowingStateLoss();
                     break;
 
                 case R.id.cameraItem:
-                    transaction.replace(R.id.frameLayout, fragmentCamera).commitAllowingStateLoss();
+                    Intent intent2 = new Intent(MainActivity.this, cameraActivity.class);
+                    startActivity(intent2);
+                    //transaction.replace(R.id.frameLayout, fragmentCamera).commitAllowingStateLoss();
 
                     break;
 
                     case R.id.calendarItem:
-                    transaction.replace(R.id.frameLayout, fragmentCalendar).commitAllowingStateLoss();
-                    break;
+                        Intent intent3 = new Intent(MainActivity.this, calendarActivity.class);
+                        startActivity(intent3);
+                        //transaction.replace(R.id.frameLayout, fragmentCalendar).commitAllowingStateLoss();
+                        break;
 
                     case R.id.searchItem:
+                        /*Intent intent4 = new Intent(MainActivity.this, searchActivity.class);
+                        startActivity(intent4);*/
                         transaction.replace(R.id.frameLayout, fragmentSearch).commitAllowingStateLoss();
                         break;
             }

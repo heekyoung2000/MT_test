@@ -11,9 +11,10 @@ import androidx.fragment.app.Fragment;
 
 public class cameraFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_camera, container, false);
+        View v= inflater.inflate(R.layout.activity_camera, container, false);
         /*Intent intent = new Intent(getActivity(), cameraActivity.class);
         startActivity(intent);*/
+        return v;
 
 
     }

@@ -11,6 +11,9 @@ import androidx.fragment.app.Fragment;
 
 public class homeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_home, container, false);
+        View v=inflater.inflate(R.layout.activity_home, container, false);
+        /*Intent intent = new Intent(getActivity(), homeActivity.class);
+        startActivity(intent);*/
+        return v;
     }
 }
